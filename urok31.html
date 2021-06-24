@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create_append</title>
+</head>
+<body>
+<!--БЛОК 1. Создание и добавление элементов на страницу -->
+<!--метод createElement - создает элемент (но не добавляет)-->
+<!--appendChild - добавляет созданный элемент-->
+<!--<div id="parent"></div>-->
+<ul id="sparent">
+</ul>
+<script>
+/*    const parent = document.querySelector(`#parent`);
+    const p = document.createElement(`p`);
+    p.innerHTML = `Меня сгенерировали!`;
+    parent.appendChild(p);*/
+// Пример, генерации списка
+    const tparent = document.querySelector(`#sparent`);
+    let li = ``;
+    for (let i = 1; i <= 10; i++){
+        li = document.createElement(`li`);
+        li.innerHTML = `Элемент списка ${i}`;
+        tparent.appendChild(li);
+    }
+    let lastLi = document.createElement(`li`);
+    lastLi.innerHTML = `Я последнийЖ(`;
+    tparent.appendChild(lastLi);
+    let selectLi = document.querySelectorAll(`ul#tparent>li`);
+    selectLi[3].innerHTML = `Меня поменяли!`;
+</script>
+</body>
+</html>

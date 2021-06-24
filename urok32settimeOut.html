@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--БЛОК 1. Таймеры - методы setInterval()
+setInterval() - запускает функцию через определенный промежуток времени.
+Принимает два аргумента
+1. - callback
+2. кол-во миллисекунд (1000мс = 1с). Минимальное значение 10мс
+-->
+<!--<script>
+/*    function timer() {
+document.write(`Timer<br>`);
+    }
+    setInterval(timer, 1000);*/
+/*setInterval(() => document.write(`Timer<br>`));*/
+</script>-->
+<!--БЛОК 2.-->
+<!--<input type="button" value="Запустить таймер" id="start">
+<input type="button" value="Остановить таймер" id="end">
+<p class="parch"></p>
+<script>
+    let timerStart = document.querySelector(`#start`);
+    let timerEnd = document.querySelector(`#end`);
+    let timerId = null;
+    let i = 0;
+
+    timerStart.addEventListener(`click`, () => {
+        timerId = setInterval(() => document.querySelector(`.parch`).innerHTML += (`${++i}`), 2000);
+    });
+
+    timerEnd.addEventListener(`click`, () => {
+        for (let j = 0; ; j&#45;&#45; ){
+            clearInterval(timerId, );
+            timerId&#45;&#45;;
+        }
+    });
+
+</script>-->
+<!--БЛОК 3. setTimeOut-->
+<!--<input type="button" value="Жми" id="test" onclick=" f()">
+<script>
+    setTimeout(()=> alert(`Я буду вызван через 3 сек.`), 3000);
+</script>-->
+<!--пример с рекурсией-->
+<h1 id="clock"></h1>
+<script>
+    let date = new Date();
+    let hours = 0;
+    let minute = 0;
+    let seconds = 0;
+    function timer() {
+        date = new Date();
+        seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
+        minute = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+        hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
+        document.querySelector(`#clock`).innerHTML = `${seconds}:${minute}:${hours}`;
+        setInterval(timer, 1000);
+    }
+    timer()
+/*    timer();
+    function timer() {
+        document.write(`Timer<br>`);
+        setTimeout(timer, 1000);
+    }*/
+/*Создать электронные часы, выводящие данные в формате HH:MM:SS*/
+    requestAnimationFrame()
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>listener</title>
+</head>
+<body>
+<!--БЛОК 1. Listener (слушатель) - задача его сработать при определенном событии-->
+<!--JS - за создание слушателя отвечает addEventListener()
+1. параматр - название событие (без, приставки on, т.е. click, focus и др.
+2. параметром (callback), т.е. которая привязывается к событию-->
+<!--<input type="button" id="test" value="на мне висит два слушателя">
+<script>
+    const  elem = document.querySelector(`#test`);
+    elem.addEventListener(`click`, func1);
+    elem.addEventListener(`click`, () => alert(`Второй слушатель`));
+function func1() {
+alert(`Первый слушатель`)
+}
+
+</script>-->
+<!--Пример с создание/отключением слушателя-->
+<!--<input type="button" id="test1" value="Кнопка 1">
+<input type="button" id="test2" value="Кнопка 2">
+<input type="button" id="test3" value="Кнопка 3">
+<input type="button" id="test4" value="Кнопка 4">
+<input type="button" id="test5" value="Кнопка 5">
+<script>
+    const elems = document.querySelectorAll(`input[type="button"]`);
+    for (const elem of elems){
+        elem.addEventListener(`click`,f)
+    }
+    function f() {
+        alert(this.value);
+this.removeEventListener(`click`,f) //удаляем слушателя с элемента на который мы произвели действие
+    }
+</script>-->
+
+</body>
+</html>

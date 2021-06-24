@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClientUS</title>
+</head>
+<body>
+<!--<input type="button" value="Ткни меня" onclick="alert(`Привет`); alert(`Z nen`)">
+<button onmousemove="pressF()">текст кнопки</button>
+<script>
+function pressF() {
+    console.log(`Шевели мыслями`)
+}
+</script>-->
+<!--Основные ивенты-->
+<!--onclick - произведен клик кнопки, кнопка была отпущена
+onmousedown - отжата кнопка мышки
+ondblclick - двойной щелчек
+onmousemove - указатель мыши движется внутри области
+onmouseout
+
+На клавиатуру
+onkeydown - нажата кнопка на клавиатуре
+onkeypress - кнопка нажата и не отпускается
+onkeyup - отпущена ранее нажатая кнопка
+
+События форм и элементов страницы
+onchange - элемент теряет фокус ввода, а содержимое элемента изменилось за время, пока элемент был в фокусе
+onselect - какая-то часть текста внутри элемента становится выделенной
+onsubmit -  в форме нажата кнопка "Отправить", но отправка формы на сервер еще не производилась-->
+<!--onblur - элемент управления теряет фокус ввода, т.е. курсор переходит к другому элементу
+onfocus - отображаемый элемент получил фокус ввода. для текстовых полей это событие означает, что курсор уже находится в данном элементе-->
+
+<!--БЛОК 2 Поиск элементов на странице-->
+<!--<ul class="test-list">
+    <li>Lorem ipsum dolor.</li>
+    <li>Aperiam, laborum, obcaecati.</li>
+    <li>Minima molestias, unde.</li>
+    <li>Aliquam hic, odit?</li>
+    <li>Dignissimos omnis, praesentium!</li>
+    <li>Harum in, libero!</li>
+</ul>
+
+<input type="text" value="Hi" id="est">
+&lt;!&ndash;<input type="button" onclick="f()" value="Жми">&ndash;&gt;
+<input type="button" value="0" class="clicker" onclick="btnClicker(this)">-->
+<!--this - объект котекста, если передавать его в качестве параметра в функцию, т.е. без поиска) можем менять параметры тега-->
+<<!--script>
+    function btnClicker(params) {
+       // debugger; запускает отладку программы при открытой консоли с точки вызова самого debugger
+        console.log(params.getAttribute(`value`));
+        params.value++;
+        params.className = `blalal` //поменяем значение в атрибуте class
+    }
+    
+</script>-->
+<script>
+   /* function f() {
+   /!*     let counter = 0;
+        /!*let elemList = document.querySelector(`.test-list > li`);
+elemList.innerHTML = `Hi....`;*!/ //поменяем текст, в первом элементе списка. Выводит первый элемент списка
+        const ul = document.querySelectorAll(`.test-list > li`);
+        for (const ulElement of ul) {
+            ulElement.innerHTML = `New element ${++counter}`;
+        }*!/
+
+    }*/
+ //Универсальный поиск по селектору
+</script>
+<!--Задача. Блокирование полей ввода. Создать две вкладки и текстовое поле. Одна кнопка блокирует ввод в текствое поле, а другая разблокирует-->
+
+<input type="text" onclick="f()" value="Жми" id="trf" disabled = 'false'>
+<input type="button" value="Разблокировать" id="clicker" onclick="btnClicker()">
+<!--<script>
+
+
+function btnClicker() {
+    let uV1 = document.getElementById("clicker");
+        f(false);
+}
+function f(mer) {
+    if(mer != true){
+    let uV2 = document.getElementById("trf").disabled = mer;
+}}
+</script>-->
+</body>
+</html>

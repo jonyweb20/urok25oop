@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--//Одна из трех парадигм ООП - Наследование.
+//Позволяет создать расширенный класс на основе родительского, такой класс называется дочерним или производным-->
+<script>
+    class Animal{
+        constructor(name) {
+            this.name = name;
+        }
+        showInfo(){
+            console.log(`Animal name is ${this.name}`);
+        }
+        move(){
+            console.log(`Moving...`)
+        }
+    }
+    //Class Cat унаследовался от класса Animal. Тем самым он имеет те же мотоды, но при этом, дочерний класс может перереопределять данные свойства и методы
+    class Cat extends Animal{
+        constructor(name, age, height) {
+            super(name);
+            //кошачьи свойства
+            this.age = age;
+            this.height = height;
+        }
+        showInfo() {
+            super.showInfo(); // необязательная инструкция, можно не использовать или переопределить
+            console.log(`${this.age}Years old`);
+            console.log(`Cat height = ${this.height}`);
+        }
+
+    }
+    class Mouse extends Cat{
+
+    }
+  const someAnimal = new  Animal(`Иннокентий`);
+    someAnimal.showInfo()
+    let barsik = new Cat(`Barsik`, 5, 33);
+    barsik.showInfo()
+    let mickey = new Mouse(`Mickey`, 100.60);
+    mickey.move();
+    mickey.showInfo();
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        #down{
+
+        }
+        #block{
+            display: none;
+            width: 500px;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<!--<h1> заголовок</h1>
+<ul>
+    <li>Lorem ipsum dolor.</li>
+    <li>Eveniet, minima, veritatis?</li>
+    <li>Alias, ea nam!</li>
+    <li>Excepturi, illum, quam.</li>
+    <li>Accusantium, qui, reiciendis.</li>
+</ul>
+<p id="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p >Repellat vel vitae voluptas? Dolores fugiat illum tenetur.</p>
+<p>Aliquid consequatur maiores quisquam recusandae tempore! Odit, quod.</p>
+<p>Aliquid beatae minima nostrum odit quod, sunt tempora!</p>
+
+<p>Привет студенты</p>
+<p></p>
+<p></p>
+<p></p>
+<h2>gfh</h2>
+<h2>dfh</h2>
+<h2>dhf</h2>
+<h2>dfh</h2>-->
+
+<!--БЛОК2 анимация>-->
+<div id="down">Нажми, чтобы развернуть</div>
+<div id="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur atque dicta dolore esse
+    harum, magnam molestias nulla porro praesentium quasi rem repellat sint sit sunt velit vero, voluptatem voluptatum?
+    Aperiam at dolorem eum, ex expedita fugiat ipsam itaque natus nobis quasi reiciendis rerum, saepe veritatis vitae,
+    voluptatem! Consequatur, nulla!
+</div>
+<script>
+    $(()=>{
+        $('#down').click(()=>{
+            $('#block').slideDown('slow');
+        })
+        $('#block').mouseenter(()=>{
+            $('#block').slideUp(1000);
+        })
+    })
+    /*document.getElementsByTagName('h1')[0].innerHTML = 'Обращение через document';*/
+  /*  $('h1').html('JQuery чист');*/
+    //Справка!!! чтобы выполнять код JQuery и быть уверенным, что оно загрузиться, необходимо оборачивать код в специальную функцию
+    // Полный вариант функции:
+  /*  $(document).ready(()=>{$('h1').html('JQuery заголовок')});
+    $(function () {$('h1').html('JQuery заголовок')});*/
+//Задача применить стили к элементам  списка
+  /*  let list = document.querySelectorAll('ul>li');
+    for(let i = 0; i < list.length; i++){
+        list[i].style.backgroundColor = 'red';
+        list[i].innerHTML = 'New ${i}';
+    }*/
+  /*  $('ul>li').css('backgroundColor', 'green', 'font-size', '22px').html('JQuery заголовок')*/
+   /* $('ul>li').each((index, element)=>{
+        $(element).css('backgroundColor','blue').html('JQuery заголовок');
+    })
+    $('#first ~ p').css({'fontSize': '32', 'border': '2px solid red'});*/
+   
+    /*Пример с фильтром контента:*/
+    //псевдокласс: contains - выбирает элементы по наличию определенного текста в них
+  /*  let $elem = $('p:contains("Привет")');
+    alert($elem.html());*/
+    //псевдокласс: empty - находит пустые элементы
+
+/*    $('p:empty, h2:first.remove').html('Новый текст');*/
+
+</script>
+</body>
+</html>

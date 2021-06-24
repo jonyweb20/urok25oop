@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getter_setter</title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastMame = lastName;
+          this._gender = `male`;//приватное поле
+        }
+        //Геттер - свойство, инициализируется ключевым словом, Get
+        //Используется для получения значения (т.е. в нем обязательно исп. оператор Return
+        // Используется для возвращения приватного свойства
+        get gender() {
+            return this._gender;
+        }
+        set gender(value) {
+            if (value === `male` || value === `female`){
+                this._gender = value;
+            }
+            else {
+                console.log(`Можно выбрать только мужской или женский`)
+            }
+        }
+
+        getFullName(){
+            return `${this.firstName} ${this.lastMame}`;
+        }
+    }
+const evgeniy = new Person(`Evgeniy`, `Shutov`);
+    evgeniy.gender; // вызов геттера
+    console.log(evgeniy.gender);
+    evgeniy.gender = `jkl`; // устанавливаем значение в приватное свойство
+    console.log(evgeniy.gender);// null как значение
+    evgeniy.gender = `female`;
+    console.log(evgeniy.gender);
+    alert(evgeniy.getFullName()); 
+</script>
+
+</body>
+</html>
